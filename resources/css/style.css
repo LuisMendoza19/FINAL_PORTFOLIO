@@ -1,0 +1,203 @@
+:root {
+    --color-vibrante: #ff4438;
+    --color-bg: #efebe0;
+    --header-font:'EB Garamond', serif;
+    --main-font:'TeX Gyre Heros', serif;
+  }  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: var(--color-bg);
+
+}
+
+.wrapper{
+    max-width: 1000px;
+    min-width: 250px;
+    margin: 0px auto;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+
+.content-info{
+    width: 50%;
+    margin-right: 20px;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    text-align: justify;
+}
+
+.content-info-about{
+    margin-bottom: 20px;
+}
+
+.content-info h1, .content-info h1 a{
+    font-weight: 800;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.content-info h2{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.content-info p a{
+    text-decoration: none;
+    color:black;
+    font-size: 12px;
+}
+
+.content-info p a:hover{
+    text-decoration: underline;
+}
+.content-info-projects{
+    margin-bottom: 20px;
+}
+
+.content-info-projects img{
+    width: 100%;
+    height: auto;
+}
+
+.project-title{
+    margin: 5px 0px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.project-title:hover{
+    cursor: pointer;
+}
+
+.project-description{
+    margin: 20px auto;
+}
+
+.list-item{
+    display: block;
+    list-style: none;
+}
+
+.conthea-project,
+.fotomatic-project,
+.tsunami-project{
+    z-index: 100;
+    opacity: 1;
+    transition: all ease 1s;
+}
+
+.hidden{
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    height: 0px;
+}
+
+.project-img{
+    border-radius: 5px;
+}
+#UANL{
+    font-style: italic;
+    text-decoration: underline;
+    transition: color .1s ease-out .2s;
+}
+
+#UANL:hover{
+    color:#ff4438;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.content-info-skills{
+    margin-bottom: 100px;
+}
+
+.content-info-skills h2{
+    margin-bottom: 10px;
+}
+
+.content-info-skills img{
+    width: 25px;
+    height: auto;
+    margin: 0px 5px;
+}
+
+/*IMAGEN*/
+
+
+.content-image{
+    padding: 10px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.content-image img{
+    margin:20px;
+    border-radius: 5px;
+    width:80%;
+    height: auto;
+    transition: transform .8s;
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.content-image img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.next{
+    margin-top: 20px;
+}
+
+#footer{
+    position: fixed;
+    bottom: 0px;
+    width:100%;
+    /* Height of the footer*/ 
+    height: 20px;
+    background-color: #efebe0;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    border-top: 1px solid black;
+    padding: 20px 0px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .content-info{
+        width: 95%;
+    }
+
+    .content-image{
+        text-align: center;
+        width: 95%;
+        margin: 0px;
+        margin-top: -100px;
+    }
+  }
